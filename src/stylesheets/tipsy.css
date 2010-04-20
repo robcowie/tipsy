@@ -1,7 +1,48 @@
-.tipsy { padding: 5px; font-size: 10px; filter: alpha(opacity=80); background-repeat: no-repeat;  background-image: url(../images/tipsy.gif); }
+.tipsy { padding: 5px; font-size: 10px; filter: alpha(opacity=80); background-repeat: no-repeat; }
   .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
   .tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
-  .tipsy-north { background-position: top center; }
-  .tipsy-south { background-position: bottom center; }
-  .tipsy-east { background-position: right center; }
-  .tipsy-west { background-position: left center; }
+
+  .tipsy-pointer {
+    position: absolute; 
+  	width:0; 
+  	height:0; 
+  	border-bottom-width: 0;
+  	background: none;
+  }
+  .tipsy-north .tipsy-pointer {
+    border-left: 5px solid transparent; 
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    top:  0px;
+    right: auto;
+    left: 50%;
+    margin-left: -5px;
+  }
+  .tipsy-south .tipsy-pointer {
+    border-left: 5px solid transparent; 
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    bottom:	0px;
+    right: auto;
+    left: 50%;
+    margin-left: -5px;
+  }
+  .tipsy-east .tipsy-pointer {
+    border-top: 5px solid transparent; 
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    /*bottom: 0px;*/
+    right: 0px;
+    top: 50%;
+    margin-top: -5px;
+  }
+  .tipsy-west .tipsy-pointer {
+    border-top: 6px solid transparent; 
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid black;
+    /*bottom: 0px;*/
+    left: 0px;
+    top: 50%;
+    margin-top: -6px;
+  }
+  
